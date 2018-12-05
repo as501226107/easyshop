@@ -14,7 +14,6 @@ import org.csource.fastdfs.*;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -42,7 +41,7 @@ public class BrandController {
     BrandService bs;
     // 查询首页
     @RequestMapping("/list/{pageIndex}")
-    public String list(Brand brand, @PathVariable("pageIndex") Integer pageIndex, @RequestParam(name = "pageSize", defaultValue = "5") Integer pageSize, Model model) {
+    public String list(Brand brand, @PathVariable("pageIndex") Integer pageIndex, @RequestParam(name = "pageSize", defaultValue = "5")Integer pageSize, Model model) {
         Page<Brand> results = null;
         // 分页工具
         Page<Brand> page = new Page<Brand>(pageIndex, pageSize);
@@ -55,7 +54,6 @@ public class BrandController {
             entityWrapper.eq("china", brand.getChina());
         }
         results = bs.selectPage(page, entityWrapper.eq("del",0));
-        System.out.println(results);
         // 获取总数
         int totalCount = ((Long) results.getTotal()).intValue();
         // 查询是否有上一页
@@ -79,10 +77,11 @@ public class BrandController {
         model.addAttribute("brand",brand);
         return "Edit_Brand";
     }
+
     //改变状态
     @RequestMapping("/changeStatus/{id}")
     @ResponseBody
-    public Boolean changeStatus(@PathVariable Integer id, Integer status, BindingResult bindingResult){
+    public Boolean changeStatus(@PathVariable Integer id, Integer status){
         boolean id1 = bs.updateForSet("status="+status, new EntityWrapper<Brand>().eq("id", id));
         System.out.println("状态"+id1+",id"+id+"status."+status);
         return id1;
@@ -91,12 +90,19 @@ public class BrandController {
     @RequestMapping("/delete/{id}")
     @ResponseBody
     public void delete(@PathVariable Integer id,HttpServletResponse response) throws Exception{
+        response.setContentType("text/html;charset=utf8");
         boolean id1 = bs.updateForSet("del="+1, new EntityWrapper<Brand>().eq("id", id));
         if(id1){
             response.getWriter().write("<script>alert('删除成功');location.href='/brand/list/1'</script>");
         }else{
             response.getWriter().write("<script>alert('删除失败');location.href='/brand/list/1'</script>");
         }
+    }
+    //批量删除
+    @RequestMapping("/deletes")
+    @ResponseBody
+    public Boolean deletes(Integer[] ids){
+        return bs.deletes(ids);
     }
     //改变状态
     @RequestMapping("/update")

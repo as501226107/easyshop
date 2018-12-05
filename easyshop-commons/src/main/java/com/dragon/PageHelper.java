@@ -126,4 +126,18 @@ public class PageHelper<T> {
 		this.numbers = numbers;
 	}
 
+	@Override
+	public String toString() {
+		return "PageHelper{" +
+				"totalCount=" + totalCount +
+				", pageIndex=" + pageIndex +
+				", pageSize=" + pageSize +
+				", totalPage=" + totalPage +
+				", list=" + list +
+				", bean=" + bean +
+				", startPage=" + startPage +
+				", endPage=" + endPage +
+				", numbers=" + numbers +
+				'}';
+	}
 }

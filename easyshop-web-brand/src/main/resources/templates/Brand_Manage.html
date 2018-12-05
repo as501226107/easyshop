@@ -46,7 +46,7 @@
      <div class="border clearfix">
        <span class="l_f">
         <a href="Add_Brand.html" th:href="@{/brand/pageToAdd}"  title="添加品牌" class="btn btn-warning Order_form"><i class="icon-plus"></i>添加品牌</a>
-        <a href="javascript:ovid()" class="btn btn-danger"><i class="icon-trash"></i>批量删除</a>
+        <a href="javascript:deletes()" class="btn btn-danger"><i class="icon-trash"></i>批量删除</a>
         <a href="javascript:ovid()" class="btn btn-info">国内品牌</a>
         <a href="javascript:ovid()" class="btn btn-success">国外品牌</a>
        </span>
@@ -78,7 +78,7 @@
 		</thead>
 	<tbody>
 		<tr th:each="brand:${pageHelper.list}">
-          <td width="25px"><label><input type="checkbox" class="ace" ><span class="lbl"></span></label></td>
+          <td width="25px"><label><input type="checkbox" class="ace ids" th:value="${brand.id}" ><span class="lbl"></span></label></td>
           <td width="80px" th:text="${brand.id}">45631</td>
           <td width="50px"><input type="text" class="input-text text-c" th:value="${brand.sorted}" value="1" style="width:60px"/></td>
           <td><img th:src="${brand.img}" src="products/logo/156.jpg"  width="80" height="80"/></td>
@@ -94,7 +94,7 @@
           <a th:if="${brand.status==1}" th:onclick="|member_stop(this,${brand.id})|" onclick="member_stop(this,'10001')"  href="javascript:;" title="停用"  class="btn btn-xs "><i class="icon-ok bigger-120"></i></a>
           <a th:if="${brand.status==0}" th:onclick="|member_start(this,${brand.id})|" onclick="member_start(this,'10001')"  href="javascript:;" title="启用"  class="btn btn-xs btn-success"><i class="icon-ok bigger-120"></i></a>
           <a title="编辑" th:onclick="|pageToUpdate(${brand.id})|"      onclick="member_edit('编辑','/brand/pageToUpdate','4','','510')" href="javascript:;"  class="btn btn-xs btn-info" ><i class="icon-edit bigger-120"></i></a>
-          <a title="删除" href="javascript:;"  onclick="member_del(this,'1')" class="btn btn-xs btn-warning" ><i class="icon-trash  bigger-120"></i></a>
+          <a title="删除" th:onclick="|member_del(this,${brand.id})|" href="javascript:;"  onclick="member_del(this,'1')" class="btn btn-xs btn-warning" ><i class="icon-trash  bigger-120"></i></a>
           </td>
 		</tr>
         </tbody>
@@ -212,6 +212,40 @@ function generateOrders(id){
 function member_show(title,url,id,w,h){
 	layer_show(title,url,w,h);
 }
+/*品牌-批量删除*/
+function deletes(){
+    var aces=$(".ids");
+    var arr=new Array();
+    $(aces).each(function (index,ac) {
+        var ch=$(ac).prop("checked");
+       if(ch==true){
+           arr.push($(ac).val());
+       }
+    });
+    if(arr.length==0){
+        layer.msg('请选中!!',{icon: 5,time:100});
+        return;
+    }
+    layer.confirm('确认要删除吗？',function(index){
+        $.ajax({
+            url:"/brand/deletes",
+            data:"ids="+arr.toString(),
+            type:"post",
+            success:function (data) {
+                if(data==true){
+                    layer.msg('删除成功!',{icon: 6,time:1000},function () {
+                        location.href="/brand/list/1";
+                    });
+                }else{
+                    layer.msg('删除失败!',{icon: 5,time:1000});
+                }
+            }
+        })
+    });
+    console.log(arr)
+
+
+}
 /*品牌-停用*/
 function member_stop(obj,id){
 	layer.confirm('确认要停用吗？',function(index){
@@ -264,8 +298,7 @@ function member_edit(title,url,id,w,h){
 /*品牌-删除*/
 function member_del(obj,id){
 	layer.confirm('确认要删除吗？',function(index){
-		$(obj).parents("tr").remove();
-		layer.msg('已删除!',{icon:1,time:1000});
+		location.href="/brand/delete/"+id;
 	});
 }
 laydate({

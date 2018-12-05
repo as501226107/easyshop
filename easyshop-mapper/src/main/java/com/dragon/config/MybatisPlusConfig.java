@@ -21,11 +21,12 @@ public class MybatisPlusConfig {
         factoryBean.setDataSource(dataSource);
        //配置mybatis配置文件
          ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-        Resource mybatisConfigXml = resolver.getResource("classpath:mybatis-config.xml");
+         Resource mybatisConfigXml = resolver.getResource("classpath:mybatis-config.xml");
 //        //设置mapper扫描位置
 //        Resource mybatisMapperXml = resolver.getResource("classpath*:com/dragon/mapper/*.xml");
 //        factoryBean.setMapperLocations(new Resource[]{mybatisMapperXml});
 //        factoryBean.setConfigLocation(mybatisConfigXml);
+        factoryBean.setConfigLocation(mybatisConfigXml);
         //设置别名扫描包
         factoryBean.setTypeAliasesPackage("com.dragon.bean");
         return factoryBean;

@@ -12,5 +12,5 @@ import com.baomidou.mybatisplus.service.IService;
  * @since 2018-12-05
  */
 public interface BrandService extends IService<Brand> {
-
+    public Boolean deletes(Integer[] ids);
 }
