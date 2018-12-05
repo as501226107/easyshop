@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dragon.mapper.BrandMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dragon.bean.Brand">
+        <id column="id" property="id" />
+        <result column="sorted" property="sorted" />
+        <result column="name" property="name" />
+        <result column="location" property="location" />
+        <result column="description" property="description" />
+        <result column="img" property="img" />
+        <result column="status" property="status" />
+        <result column="china" property="china" />
+        <result column="createtime" property="createtime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, sorted, name, location, description, img, status, china, createtime
+    </sql>
+
+</mapper>
