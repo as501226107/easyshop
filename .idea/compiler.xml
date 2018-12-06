@@ -15,6 +15,7 @@
         <module name="easyshop-content-service" />
         <module name="easyshop-content-serviceimpl" />
         <module name="easyshop-mapper" />
+        <module name="easyshop-web" />
         <module name="easyshop-web-admin" />
         <module name="easyshop-web-brand" />
         <module name="easyshop-web-content" />

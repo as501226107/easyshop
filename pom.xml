@@ -164,5 +164,6 @@
         <module>easyshop-content-service</module>
         <module>easyshop-content-serviceimpl</module>
         <module>easyshop-web-content</module>
+        <module>easyshop-web</module>
     </modules>
 </project>
