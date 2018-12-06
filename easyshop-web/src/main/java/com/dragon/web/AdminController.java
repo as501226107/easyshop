@@ -48,12 +48,16 @@ public class AdminController {
                return "login";
         }
         session.setAttribute("user",result);
-        return "home";
+        return "index";
     }
     @ResponseBody
     @RequestMapping("/list")
     public List<Admin> getList(){
        return as.selectList(null);
+    }
+    @RequestMapping("/home")
+    public String home(){
+        return "home";
     }
 }
 
