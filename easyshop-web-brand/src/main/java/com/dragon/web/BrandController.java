@@ -86,7 +86,7 @@ public class BrandController {
         System.out.println("状态"+id1+",id"+id+"status."+status);
         return id1;
     }
-    //改变状态
+    //删除
     @RequestMapping("/delete/{id}")
     @ResponseBody
     public void delete(@PathVariable Integer id,HttpServletResponse response) throws Exception{
@@ -121,7 +121,7 @@ public class BrandController {
     public String pageToAdd() throws Exception{
         return "Add_Brand";
     }
-    //改变状态
+    //添加
     @RequestMapping("/add")
     public void add(Brand brand, HttpServletRequest request, HttpServletResponse response) throws Exception{
         //设置时间
@@ -135,9 +135,9 @@ public class BrandController {
         if(insert){
             response.getWriter().write("<script>alert('添加成功');location.href='/brand/list/1'</script>");
         }else{
-            response.getWriter().write("<script>alert('添加失败');location.href='/brand/list/1'</script>");
+        response.getWriter().write("<script>alert('添加失败');location.href='/brand/list/1'</script>");
         }
-    }
+        }
     @RequestMapping("/upload")
     @ResponseBody
     public MyFile uploadPic(MultipartFile file, HttpServletRequest request) throws Exception {

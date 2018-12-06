@@ -27,8 +27,8 @@
         <springboot-dubbox>1.0.0</springboot-dubbox>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!--set java version -->
-        <thymeleaf.version>3.0.0.RELEASE</thymeleaf.version>
-        <thymeleaf-layout-dialect.version>2.1.1</thymeleaf-layout-dialect.version>
+        <thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>
+        <thymeleaf-layout-dialect.version>2.3.0</thymeleaf-layout-dialect.version>
         <java.version>1.8</java.version>
     </properties>
     <dependencyManagement>
@@ -51,11 +51,11 @@
                 <artifactId>spring-boot-starter-thymeleaf</artifactId>
                 <version>1.5.2.RELEASE</version>
             </dependency>
-            <!--<dependency>-->
-                <!--<groupId>net.sourceforge.nekohtml</groupId>-->
-                <!--<artifactId>nekohtml</artifactId>-->
-                <!--<version>1.9.22</version>-->
-            <!--</dependency>-->
+            <dependency>
+                <groupId>net.sourceforge.nekohtml</groupId>
+                <artifactId>nekohtml</artifactId>
+                <version>1.9.19</version>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-tomcat</artifactId>
@@ -161,5 +161,8 @@
         <module>easyshop-brand-serviceimpl</module>
         <module>easyshop-web-brand</module>
         <module>easyshop-commons</module>
+        <module>easyshop-content-service</module>
+        <module>easyshop-content-serviceimpl</module>
+        <module>easyshop-web-content</module>
     </modules>
 </project>

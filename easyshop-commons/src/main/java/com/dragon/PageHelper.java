@@ -16,7 +16,7 @@ public class PageHelper<T> {
 	private int pageIndex;// 页码
 	private int pageSize;// 每一页的数量
 	private int totalPage;// 总共的页数
-	private List<T> list;// 存放User集合
+	private List<T> list;// 存放集合
 	private Object bean;// 回显的数据
 	private int startPage;// 开始的页数,要求开始的页面之前最多有四个页面，之后最多有五个页面
 	private int endPage;// 结束的页数
