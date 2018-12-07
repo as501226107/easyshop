@@ -11,6 +11,12 @@
 
     <artifactId>easyshop-order-service</artifactId>
     <dependencies>
+        <dependency>
+            <artifactId>easyshop-bean</artifactId>
+            <groupId>com.easyshop</groupId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
         <!-- 接口层引用mapper层 -->
         <dependency>
             <artifactId>easyshop-mapper</artifactId>

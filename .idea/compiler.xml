@@ -6,42 +6,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="easyshop-admin-service" />
-        <module name="easyshop-admin-serviceimpl" />
         <module name="easyshop-bean" />
         <module name="easyshop-brand-service" />
         <module name="easyshop-brand-serviceimpl" />
         <module name="easyshop-commons" />
         <module name="easyshop-mapper" />
+        <module name="easyshop-order-service" />
+        <module name="easyshop-order-serviceimpl" />
+        <module name="easyshop-orderItem-service" />
+        <module name="easyshop-orderItem-serviceimpl" />
+        <module name="easyshop-orderShipping-service" />
+        <module name="easyshop-orderShipping-serviceimpl" />
         <module name="easyshop-service" />
         <module name="easyshop-serviceimpl" />
-        <module name="easyshop-web-admin" />
-        <module name="easyshoporderItemservice" />
-        <module name="easyshoporderItemserviceimpl" />
-        <module name="easyshoporderservice" />
-        <module name="easyshoporderserviceimpl" />
-        <module name="easyshoporderShippingservice" />
-        <module name="easyshoporderShippingserviceimpl" />
+        <module name="easyshop-web" />
+        <module name="easyshop-web-brand" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="easyshop-admin-web" target="1.8" />
-      <module name="easyshop-web-brand" target="1.8" />
-      <module name="easyshopuserserviceimpl" target="1.8" />
-    </bytecodeTargetLevel>
-  </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="easyshop-admin-service" options="" />
-      <module name="easyshop-admin-serviceimpl" options="" />
-      <module name="easyshop-bean" options="" />
-      <module name="easyshop-brand-service" options="" />
-      <module name="easyshop-brand-serviceimpl" options="" />
-      <module name="easyshop-commons" options="" />
-      <module name="easyshop-mapper" options="" />
-      <module name="easyshop-web-admin" options="" />
-      <module name="easyshop-web-brand" options="" />
-      <module name="easyshopuserserviceimpl" options="-parameters" />
-    </option>
   </component>
 </project>

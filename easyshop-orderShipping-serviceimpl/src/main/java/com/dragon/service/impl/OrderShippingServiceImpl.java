@@ -1,10 +1,11 @@
-package com.little.service.impl;
+package com.dragon.service.impl;
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import com.dragon.bean.OrderShipping;
 import com.dragon.mapper.OrderShippingMapper;
-import com.little.service.OrderShippingService;
-import org.springframework.stereotype.Service;
+import com.dragon.service.OrderShippingService;
+
 
 /**
  * <p>
