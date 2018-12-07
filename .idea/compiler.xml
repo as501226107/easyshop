@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="easyshop-admin-service" />
         <module name="easyshop-admin-serviceimpl" />
-        <module name="easyshop-admin-web" />
         <module name="easyshop-bean" />
         <module name="easyshop-brand-service" />
         <module name="easyshop-brand-serviceimpl" />
@@ -17,12 +16,13 @@
         <module name="easyshop-service" />
         <module name="easyshop-serviceimpl" />
         <module name="easyshop-web-admin" />
-        <module name="easyshop-web-brand" />
         <module name="easyshoporderservice" />
         <module name="easyshoporderserviceimpl" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="easyshop-admin-web" target="1.8" />
+      <module name="easyshop-web-brand" target="1.8" />
       <module name="easyshopuserserviceimpl" target="1.8" />
     </bytecodeTargetLevel>
   </component>
