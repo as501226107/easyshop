@@ -26,7 +26,6 @@ public class Admin implements Serializable {
     private String password;
     private String phone;
     private String email;
-    private Integer superadmin;
     private String createtime;
     private Integer status;
     private Integer del;
@@ -80,13 +79,6 @@ public class Admin implements Serializable {
         this.email = email;
     }
 
-    public Integer getSuperadmin() {
-        return superadmin;
-    }
-
-    public void setSuperadmin(Integer superadmin) {
-        this.superadmin = superadmin;
-    }
 
     public String getCreatetime() {
         return createtime;
@@ -121,7 +113,6 @@ public class Admin implements Serializable {
         ", password=" + password +
         ", phone=" + phone +
         ", email=" + email +
-        ", superadmin=" + superadmin +
         ", createtime=" + createtime +
         ", status=" + status +
         ", del=" + del +
