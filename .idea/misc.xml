@@ -3,7 +3,7 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/easyshop-admin-serviceimpl" />
-    <file type="web" url="file://$PROJECT_DIR$/easyshop-brand-serviceimpl" />
+    <file type="web" url="file://$PROJECT_DIR$/easyshop-product-serviceimpl" />
     <file type="web" url="file://$PROJECT_DIR$/easyshop-web-admin" />
   </component>
   <component name="MavenProjectsManager">

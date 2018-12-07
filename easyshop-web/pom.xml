@@ -19,7 +19,7 @@
             </dependency>
             <!--brand服务-->
             <dependency>
-                <artifactId>easyshop-brand-service</artifactId>
+                <artifactId>easyshop-product-service</artifactId>
                 <version>1.0-SNAPSHOT</version>
                 <groupId>com.easyshop</groupId>
             </dependency>

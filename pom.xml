@@ -39,12 +39,7 @@
                 <artifactId>spring-boot-starter-web</artifactId>
                 <version>1.5.2.RELEASE</version>
             </dependency>
-            <!--邮件-->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-mail</artifactId>
-                <version>1.5.2.RELEASE</version>
-            </dependency>
+
             <!-- SpringBoot整合thymeleaf依赖 -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -156,14 +151,11 @@
         <module>easyshop-mapper</module>
         <module>easyshop-admin-service</module>
         <module>easyshop-admin-serviceimpl</module>
-        <module>easyshop-web-admin</module>
-        <module>easyshop-brand-service</module>
-        <module>easyshop-brand-serviceimpl</module>
-        <module>easyshop-web-brand</module>
+        <module>easyshop-product-service</module>
+        <module>easyshop-product-serviceimpl</module>
         <module>easyshop-commons</module>
         <module>easyshop-content-service</module>
         <module>easyshop-content-serviceimpl</module>
-        <module>easyshop-web-content</module>
         <module>easyshop-web</module>
     </modules>
 </project>
