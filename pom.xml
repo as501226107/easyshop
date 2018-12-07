@@ -161,5 +161,7 @@
         <module>easyshop-brand-serviceimpl</module>
         <module>easyshop-web-brand</module>
         <module>easyshop-commons</module>
+        <module>easyshop-order-service</module>
+        <module>easyshop-order-serviceimpl</module>
     </modules>
 </project>
