@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>easyshop-order-service</artifactId>
+    <artifactId>easyshop-orderShipping-service</artifactId>
     <dependencies>
         <!-- 接口层引用mapper层 -->
         <dependency>
@@ -17,7 +17,6 @@
             <groupId>com.easyshop</groupId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
     </dependencies>
 
 </project>

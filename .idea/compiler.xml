@@ -16,8 +16,12 @@
         <module name="easyshop-service" />
         <module name="easyshop-serviceimpl" />
         <module name="easyshop-web-admin" />
+        <module name="easyshoporderItemservice" />
+        <module name="easyshoporderItemserviceimpl" />
         <module name="easyshoporderservice" />
         <module name="easyshoporderserviceimpl" />
+        <module name="easyshoporderShippingservice" />
+        <module name="easyshoporderShippingserviceimpl" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

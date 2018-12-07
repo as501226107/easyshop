@@ -1,7 +1,7 @@
 package com.dragon.mapper;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
-import com.easyshop.bean.OrderItem;
+import com.dragon.bean.OrderItem;
 
 /**
  * <p>

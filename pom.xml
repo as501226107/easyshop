@@ -156,12 +156,15 @@
         <module>easyshop-mapper</module>
         <module>easyshop-admin-service</module>
         <module>easyshop-admin-serviceimpl</module>
-        <module>easyshop-web-admin</module>
         <module>easyshop-brand-service</module>
         <module>easyshop-brand-serviceimpl</module>
         <module>easyshop-web-brand</module>
         <module>easyshop-commons</module>
         <module>easyshop-order-service</module>
         <module>easyshop-order-serviceimpl</module>
+        <module>easyshop-orderItem-service</module>
+        <module>easyshop-orderItem-serviceimpl</module>
+        <module>easyshop-orderShipping-service</module>
+        <module>easyshop-orderShipping-serviceimpl</module>
     </modules>
 </project>
