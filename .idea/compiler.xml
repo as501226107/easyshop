@@ -16,12 +16,12 @@
         <module name="easyshop-content-serviceimpl" />
         <module name="easyshop-mapper" />
         <module name="easyshop-web" />
-        <module name="easyshop-web-admin" />
-        <module name="easyshop-web-brand" />
-        <module name="easyshop-web-content" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="easyshop-web-admin" target="1.8" />
+      <module name="easyshop-web-brand" target="1.8" />
+      <module name="easyshop-web-content" target="1.8" />
       <module name="easyshopuserserviceimpl" target="1.8" />
     </bytecodeTargetLevel>
   </component>
